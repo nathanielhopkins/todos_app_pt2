@@ -53,7 +53,7 @@ export default class TodoForm extends React.Component {
       <div className='todo-form'>
         <label for='title'>Title:</label>
         <input type='text' 
-          name='title' 
+          id='title' 
           placeholder='pet the dog' 
           value={this.state.title}
           onChange={this.updateTitle}
@@ -61,7 +61,7 @@ export default class TodoForm extends React.Component {
 
         <label for='body'>Body:</label>
         <input type='text' 
-          name='body' 
+          id='body' 
           placeholder="because he's a good boy" 
           value={this.state.body}
           onChange={this.updateBody}
