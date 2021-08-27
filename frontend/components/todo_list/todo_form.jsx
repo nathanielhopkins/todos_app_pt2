@@ -11,6 +11,7 @@ export default class TodoForm extends React.Component {
       tags: []
     }
 
+    this.receiveTodo = this.props.receiveTodo;
     this.updateTitle = this.updateTitle.bind(this);
     this.updateBody = this.updateBody.bind(this);
     this.updateTags = this.updateTags.bind(this);
