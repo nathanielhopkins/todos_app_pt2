@@ -9,7 +9,7 @@ export default class TodoList extends React.Component {
       <div>
         <TodoForm receiveTodo={receiveTodo} />
       <ul className='todo-list'>
-        {this.props.todos.map(todo => <TodoListItem todo={todo} />)}
+        {this.props.todos.map(todo => <TodoListItem key={todo.id} todo={todo} />)}
       </ul>
       </div>
     )
