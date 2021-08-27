@@ -17,6 +17,7 @@ export default class TodoForm extends React.Component {
     this.updateTags = this.updateTags.bind(this);
     this.updateNewTag = this.updateNewTag.bind(this);
     this.submitForm = this.submitForm.bind(this);
+    this.uniqueId = this.uniqueId.bind(this);
   }
 
   updateTitle(event) {
@@ -41,12 +42,17 @@ export default class TodoForm extends React.Component {
   submitForm(event) {
     event.preventDefault();
     console.log(this.state);
+    console.log(this.uniqueId())
     this.setState({
       title: '',
       body: '',
       newTag: '',
       tags: []
     })
+  }
+
+  uniqueId() {
+    return new Date().getTime();
   }
 
   render() {
