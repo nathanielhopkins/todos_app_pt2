@@ -13,6 +13,7 @@ export default class TodoForm extends React.Component {
     this.updateTitle = this.updateTitle.bind(this);
     this.updateBody = this.updateBody.bind(this);
     this.updateTags = this.updateTags.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
 
   updateTitle(event) {
@@ -27,6 +28,11 @@ export default class TodoForm extends React.Component {
     let newTags = Array.from(this.state.tags);
     newTags.push(event.currentTarget.value);
     this.setState({ tags: newTags });
+  }
+
+  submitForm(event) {
+    event.currentTarget.preventdefault();
+    console.log(this.state);
   }
 
   render() {
@@ -54,7 +60,10 @@ export default class TodoForm extends React.Component {
           placeholder='Add a new tag' 
           />
 
-        <input type='submit' value='Create Todo!' />
+        <input type='submit' 
+        value='Create Todo!' 
+        onClick={this.submitForm}
+        />
       </div>
     );
   }
