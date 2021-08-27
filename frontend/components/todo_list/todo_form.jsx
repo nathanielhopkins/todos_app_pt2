@@ -41,8 +41,11 @@ export default class TodoForm extends React.Component {
 
   submitForm(event) {
     event.preventDefault();
-    console.log(this.state);
-    console.log(this.uniqueId())
+
+    let newTodo = Object.assign({}, this.state);
+    newTodo.id = this.uniqueId();
+    console.log(newTodo);
+
     this.setState({
       title: '',
       body: '',
