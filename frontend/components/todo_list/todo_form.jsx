@@ -31,7 +31,7 @@ export default class TodoForm extends React.Component {
   }
 
   submitForm(event) {
-    event.currentTarget.preventdefault();
+    event.preventDefault();
     console.log(this.state);
   }
 
