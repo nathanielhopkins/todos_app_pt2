@@ -9,6 +9,24 @@ export default class TodoForm extends React.Component {
       body: '',
       tags: []
     }
+
+    this.updateTitle = this.updateTitle.bind(this);
+    this.updateBody = this.updateBody.bind(this);
+    this.updateTags = this.updateTags.bind(this);
+  }
+
+  updateTitle(event) {
+    this.setState({ title: event.currentTarget.value });
+  }
+
+  updateBody(event) {
+    this.setState({ body: event.currentTarget.value });
+  }
+
+  updateTags(event) {
+    let newTags = Array.from(this.state.tags);
+    newTags.push(event.currentTarget.value);
+    this.setState({ tags: newTags });
   }
 
   render() {
