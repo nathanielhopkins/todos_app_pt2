@@ -7,6 +7,7 @@ export default class TodoForm extends React.Component {
     this.state = {
       title: '',
       body: '',
+      done: false,
       newTag: '',
       tags: []
     }
