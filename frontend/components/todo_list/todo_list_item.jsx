@@ -1,9 +1,17 @@
 import React from "react";
 
 export default class TodoListItem extends React.Component {
-  handleDelete(e, todo) {
+  handleDelete(e) {
     e.preventDefault();
-    this.props.removeTodo(todo);
+    this.props.removeTodo(this.props.todo);
+  }
+
+  handleDone(e) {
+    e.preventDefault();
+
+    let toggled = Object.assign({}, this.props.todo);
+    toggled.done = !toggled.done;
+    this.props.receiveTodo(toggled);
   }
   
   render() {
@@ -12,8 +20,8 @@ export default class TodoListItem extends React.Component {
     return(
       <li className='todo-list-item'>
         <h3>{todo.title}</h3>
-        <button>{todo.done == false ? 'Done' : 'Undo'}</button>
-        <button onClick={(e)=>this.handleDelete(e, todo)}>Delete</button>
+        <button onClick={(e)=>this.handleDone(e)}>{todo.done == false ? 'Done' : 'Undo'}</button>
+        <button onClick={(e) =>this.handleDelete(e)}>Delete</button>
       </li>
     )
   };
