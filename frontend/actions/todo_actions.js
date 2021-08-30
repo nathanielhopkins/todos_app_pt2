@@ -16,13 +16,9 @@ export const receiveTodo = (todo) => {
   };
 };
 
-export const removeTodo = (todoID) => {
+export const removeTodo = (todo) => {
   return {
     type: REMOVE_TODO,
-    todoID,
+    todo,
   };
 };
-
-window.receiveTodos = receiveTodos;
-window.receiveTodo = receiveTodo;
-window.removeTodo = removeTodo;
