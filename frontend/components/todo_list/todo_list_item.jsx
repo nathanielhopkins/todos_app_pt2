@@ -19,7 +19,7 @@ export default class TodoListItem extends React.Component {
 
     return(
       <li className='todo-list-item'>
-        <h3>{todo.title}</h3>
+        <h3 onClick={(e)=>console.log(this.props.todo)}>{todo.title}</h3>
         <button onClick={(e)=>this.handleDone(e)}>{todo.done == false ? 'Done' : 'Undo'}</button>
         <button onClick={(e) =>this.handleDelete(e)}>Delete</button>
       </li>
