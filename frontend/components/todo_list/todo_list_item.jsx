@@ -1,13 +1,18 @@
 import React from "react";
 
 export default class TodoListItem extends React.Component {
+  handleDelete(e, todo) {
+    e.preventDefault();
+    this.props.removeTodo(todo);
+  }
+  
   render() {
-    const {removeTodo, receiveTodo, todo} = this.props;
+    const { todo } = this.props;
 
     return(
       <li className='todo-list-item'>
         <h3>{todo.title}</h3>
-        <button onClick={removeTodo}>Delete</button>
+        <button onClick={(e)=>this.handleDelete(e, todo)}>Delete</button>
       </li>
     )
   };
