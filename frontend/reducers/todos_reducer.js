@@ -27,7 +27,7 @@ const todosReducer = (state = initialState, action) => {
       return todos;
     case REMOVE_TODO:
       let prunedTodos = Object.assign({}, state);
-      delete prunedTodos[action.todoID];
+      delete prunedTodos[action.todo.id];
       return prunedTodos;
     default:
       return state;
