@@ -7,7 +7,7 @@ export default class StepList extends React.Component {
     return(
       <div>
         <ul>
-          {steps.map(step => <StepsListItemContainer step={step} />)}
+          {steps.map(step => <li><StepsListItemContainer step={step} /></li>)}
         </ul>
         <StepForm />
       </div>
