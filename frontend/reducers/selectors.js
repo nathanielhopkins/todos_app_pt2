@@ -4,11 +4,11 @@ export const allTodos = (state) => {
 };
 
 export const stepsByTodoId = (state, todoId) => {
-  let steps = {};
+  let steps = [];
   let allSteps = Object.values(state.steps);
   allSteps.forEach((step) => {
     if(step.todoId == todoId) {
-      steps[step.id] = step;
+      steps.push(step);
     };
   });
   return steps;
