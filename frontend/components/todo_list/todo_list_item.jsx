@@ -6,7 +6,7 @@ export default class TodoListItem extends React.Component {
     super(props)
 
     this.state = { detail: false };
-    this.handleDelete = this.handleDelete.bind(this);
+
     this.handleDone = this.handleDone.bind(this);
     this.toggleView = this.toggleView.bind(this);
   }
