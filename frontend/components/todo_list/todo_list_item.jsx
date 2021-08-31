@@ -1,5 +1,5 @@
 import React from "react";
-import TodoDetailView from './todo_detail_view';
+import TodoDetailViewContainer from './todo_detail_view_container';
 
 export default class TodoListItem extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export default class TodoListItem extends React.Component {
     const { todo } = this.props;
     let detail;
     if(this.state.detail) {
-      detail = <TodoDetailView todo={todo} />;
+      detail = <TodoDetailViewContainer todo={todo} />;
     }
     return(
       <li className='todo-list-item'>
