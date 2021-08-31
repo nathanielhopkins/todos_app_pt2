@@ -1,9 +1,16 @@
 import React from 'react';
 
-export default class StepList extends React.Component {
+export default class StepList extends React.Component { 
   render() {
+    const { stepsByTodoId, todoId } = this.props;
+    const steps = stepsByTodoId(this.state, todoId);
     return(
-      <p>steplist</p>
+      <div>
+        <ul>
+          {steps.map(step => <StepsListItemContainer step={step} />)}
+        </ul>
+        <StepForm />
+      </div>
     );
   };
 };
