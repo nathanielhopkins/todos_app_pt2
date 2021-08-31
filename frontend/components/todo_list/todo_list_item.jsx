@@ -11,11 +11,6 @@ export default class TodoListItem extends React.Component {
     this.toggleView = this.toggleView.bind(this);
   }
 
-  handleDelete(e) {
-    e.preventDefault();
-    this.props.removeTodo(this.props.todo);
-  }
-
   handleDone(e) {
     e.preventDefault();
 
