@@ -6,6 +6,8 @@ export default class StepListItem extends React.Component {
     super(props)
 
     this.state = { done: false}
+
+    this.toggleDone = this.toggleDone.bind(this);
   }
   
   toggleDone(e) {
