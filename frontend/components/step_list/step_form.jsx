@@ -14,8 +14,8 @@ export default class StepForm extends React.Component {
     this.updateValue = this.updateValue.bind(this);
   };
 
-  updateValue(e, key) {
-    this.setState({key: e.currentTarget.value});
+  updateValue(type) {
+    return (e) => this.setState({[type]: e.currentTarget.value});
   }
 
   render() {
@@ -25,14 +25,14 @@ export default class StepForm extends React.Component {
           <input type='text' 
             placeholder='step1' 
             value={this.state.title}
-            onChange={(e) => this.updateValue(e, 'title')}>
+            onChange={this.updateValue('title')}>
             </input>
         </label>
         <label>Body: 
           <input type='text' 
             placeholder='do the first thing'
             value={this.state.body}
-            onChange={(e) => this.updateValue(e, 'body')}></input>
+            onChange={this.updateValue('body')}></input>
         </label>
         <button >Toggle</button>
         <button>Delete Step</button>
