@@ -31,12 +31,12 @@ export default class StepForm extends React.Component {
     newStep.id = this.uniqueId();
     this.props.receiveStep(newStep);
 
-    this.state = {
+    this.setState({
       title: '',
       body: '',
       todoId: this.props.todoId,
       done: false
-    };
+    });
   }
 
   render() {
