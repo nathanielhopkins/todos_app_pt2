@@ -12,10 +12,31 @@ export default class StepForm extends React.Component {
     };
 
     this.updateValue = this.updateValue.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.uniqueId = this.uniqueId.bind(this);
   };
 
   updateValue(type) {
     return (e) => this.setState({[type]: e.currentTarget.value});
+  }
+
+  uniqueId() {
+    return new Date().getTime();
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    let newStep = Object.assign({}, this.state);
+    newStep.id = this.uniqueId();
+    this.props.receiveStep(newStep);
+
+    this.state = {
+      title: '',
+      body: '',
+      todoId: this.props.todoId,
+      done: false
+    };
   }
 
   render() {
@@ -35,7 +56,8 @@ export default class StepForm extends React.Component {
             onChange={this.updateValue('body')}></input>
         </label>
         <button >Toggle</button>
-        <button>Delete Step</button>
+        <button type='submit'
+          onClick={this.handleSubmit}>Add Step</button>
       </div>
     )
   }
