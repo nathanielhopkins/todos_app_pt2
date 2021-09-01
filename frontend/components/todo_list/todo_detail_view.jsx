@@ -1,4 +1,5 @@
 import React from 'react';
+import StepListContainer from '../step_list/step_list_container';
 
 export default class TodoDetailView extends React.Component {
   handleDelete(e) {
@@ -11,6 +12,7 @@ export default class TodoDetailView extends React.Component {
     return(
       <div>
         <p className='detail-body'>{todo.body}</p>
+        <StepListContainer todoId={todo.id} />
         <button
           className='todo-delete'
           onClick={(e) => this.handleDelete(e)}>Delete Todo</button>
