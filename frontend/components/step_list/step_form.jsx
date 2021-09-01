@@ -55,7 +55,6 @@ export default class StepForm extends React.Component {
             value={this.state.body}
             onChange={this.updateValue('body')}></input>
         </label>
-        <button >Toggle</button>
         <button type='submit'
           onClick={this.handleSubmit}>Add Step</button>
       </div>
