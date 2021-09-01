@@ -8,6 +8,7 @@ export default class StepListItem extends React.Component {
     this.state = { done: false}
 
     this.toggleDone = this.toggleDone.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
   
   toggleDone(e) {
@@ -15,9 +16,13 @@ export default class StepListItem extends React.Component {
     this.setState({done: !this.state.done})
   }
 
+  handleDelete(step) {
+    this.props.removeStep(step.id);
+  }
+
   render() {
     const { title, body } = this.props.step;
-    const { removeStep, receiveStep } = this.props;
+    const { step } = this.props;
 
     return(
     <div>
@@ -29,7 +34,7 @@ export default class StepListItem extends React.Component {
         >{this.state.done ? "Undo" : "Done"}</button>
       <button 
         className='step-list-item-delete'
-        onClick={removeStep}
+        onClick={() => this.handleDelete(step)}
         >Delete Step</button>
     </div>
     );
