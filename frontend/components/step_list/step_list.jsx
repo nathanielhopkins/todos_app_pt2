@@ -9,7 +9,7 @@ export default class StepList extends React.Component {
         <ul>
           {steps.map(step => <li><StepsListItemContainer step={step} /></li>)}
         </ul>
-        <StepForm />
+        <StepForm todoId={todoId} />
       </div>
     );
   };
