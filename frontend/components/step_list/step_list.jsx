@@ -1,9 +1,10 @@
 import React from 'react';
+import StepForm from './step_form';
 
 export default class StepList extends React.Component { 
   render() {
-    const { stepsByTodoId, todoId } = this.props;
-    const steps = stepsByTodoId(this.state, todoId);
+    const { steps, todoId } = this.props;
+    
     return(
       <div>
         <ul>
