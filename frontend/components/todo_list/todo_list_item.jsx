@@ -32,8 +32,10 @@ export default class TodoListItem extends React.Component {
     }
     return(
       <li className='todo-list-item'>
-        <h3><a onClick={this.toggleView}>{todo.title}</a></h3>
-        <button onClick={(e)=>this.handleDone(e)}>{todo.done == false ? 'Done' : 'Undo'}</button>
+        <h3 className='list-item-title'><a onClick={this.toggleView}>{todo.title}</a></h3>
+        <button
+          className='form-button'
+          onClick={(e)=>this.handleDone(e)}>{todo.done == false ? 'Done' : 'Undo'}</button>
         {detail}
       </li>
     )

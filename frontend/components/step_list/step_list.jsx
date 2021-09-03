@@ -7,9 +7,10 @@ export default class StepList extends React.Component {
     const { steps, todoId, receiveStep } = this.props;
     
     return(
-      <div>
-        <ul>
-          {steps.map(step => <li key={step.id}><StepsListItemContainer step={step} /></li>)}
+      <div className='step-list-container'>
+        <ul className='step-list'>
+          {steps.map(step => <li className='step-list-item'
+          key={step.id}><StepsListItemContainer step={step} /></li>)}
         </ul>
         <StepForm receiveStep={receiveStep} todoId={todoId} />
       </div>

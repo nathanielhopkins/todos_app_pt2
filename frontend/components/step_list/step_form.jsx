@@ -42,20 +42,23 @@ export default class StepForm extends React.Component {
   render() {
     return(
       <div className='step-form'>
-        <label>Title: 
+        <label className='form-label' >Title:
           <input type='text' 
+            className='form-text-input'
             placeholder='step1' 
             value={this.state.title}
             onChange={this.updateValue('title')}>
             </input>
         </label>
-        <label>Body: 
+        <label className='form-label' >Body:
           <input type='text' 
+            className='form-text-input'
             placeholder='do the first thing'
             value={this.state.body}
             onChange={this.updateValue('body')}></input>
         </label>
         <button type='submit'
+          className='form-button'
           onClick={this.handleSubmit}>Add Step</button>
       </div>
     )

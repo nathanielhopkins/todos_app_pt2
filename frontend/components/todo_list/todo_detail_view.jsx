@@ -10,7 +10,7 @@ export default class TodoDetailView extends React.Component {
   render() {
     const { todo } = this.props;
     return(
-      <div>
+      <div className='todo-detail-view'>
         <p className='detail-body'>{todo.body}</p>
         <StepListContainer todoId={todo.id} />
         <button

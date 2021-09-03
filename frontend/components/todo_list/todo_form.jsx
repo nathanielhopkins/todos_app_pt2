@@ -62,16 +62,18 @@ export default class TodoForm extends React.Component {
   render() {
     return(
       <div className='todo-form'>
-        <label>Title:
+        <label className='form-label'>Title:
         <input type='text' 
+          className='form-text-input'
           id='title' 
           placeholder='pet the dog' 
           value={this.state.title}
           onChange={this.updateTitle}
           /></label>
 
-        <label>Body:
+        <label className='form-label' >Body:
         <input type='text' 
+          className='form-text-input'
           id='body' 
           placeholder="because he's a good boy" 
           value={this.state.body}
@@ -79,16 +81,20 @@ export default class TodoForm extends React.Component {
           /></label>
 
         <input type='text' 
+          className='form-text-input'
           value={this.state.newTag}
           onChange={this.updateNewTag}
           ></input>
+
         <input type='button' 
+          className='form-button'
           value='Add Tags' 
           placeholder='Add a new tag'
           onClick={this.updateTags} 
           />
 
-        <input type='submit' 
+        <input type='submit'
+        className='form-button'
         value='Create Todo!' 
         onClick={this.submitForm}
         />
