@@ -18,3 +18,32 @@ span, article, footer, time, small {
   background: transparent;
   list-style: inherit;
 }
+
+body {
+  font-family: Urbanist;
+}
+
+/* App Styling */
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  text-align: center;
+  background: rgb(18, 92, 18);
+  color: white;
+  padding: 10px;
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+}
