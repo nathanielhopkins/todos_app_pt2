@@ -82,8 +82,9 @@ export default class TodoForm extends React.Component {
           onChange={this.updateBody}
           /></label>
 
+        <div className='tags'>
         <input type='text' 
-          className='form-text-input tags'
+          className='form-text-input'
           placeholder='#tags'
           value={this.state.newTag}
           onChange={this.updateNewTag}
@@ -95,6 +96,7 @@ export default class TodoForm extends React.Component {
           placeholder='Add a new tag'
           onClick={this.updateTags} 
           />
+        </div>
 
         <input type='submit'
         className='form-button'
