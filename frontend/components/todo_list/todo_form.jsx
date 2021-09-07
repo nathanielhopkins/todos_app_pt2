@@ -98,7 +98,7 @@ export default class TodoForm extends React.Component {
           />
         </div>
 
-        <div>
+        <div className='tag-buttons'>
           {this.state.tags.map((tag, idx) => 
           <input 
             type='button'
