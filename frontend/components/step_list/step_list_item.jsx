@@ -25,18 +25,18 @@ export default class StepListItem extends React.Component {
     const { step } = this.props;
 
     return(
-    <div classname='step-list-item'>
+    <div className='step-list-item'>
       <div className='step-list-content'>
         <h4 className='step-list-item-title'>{title}</h4>
         <p className='step-list-item-body'>{body}</p>
       </div>
       <div className='step-list-buttons'>
         <button 
-          className='step-list-item-toggle'
+          className='step-list-item-toggle form-button'
           onClick={this.toggleDone}
           >{this.state.done ? "Undo" : "Done"}</button>
         <button 
-          className='step-list-item-delete'
+          className='step-list-item-delete todo-delete'
           onClick={() => this.handleDelete(step)}
           >Delete Step</button>
       </div>
