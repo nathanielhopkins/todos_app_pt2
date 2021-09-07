@@ -127,3 +127,16 @@ body {
   color: yellow;
   cursor: pointer;
 }
+
+
+
+
+/* Todo List  */
+
+.todo-list {
+  margin-left: 20px;
+}
+
+.todo-list-item {
+  margin-bottom: 20px;
+}
