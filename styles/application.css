@@ -172,6 +172,7 @@ body {
   padding-left: 20px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .list-item-title {
@@ -214,4 +215,28 @@ body {
   cursor: pointer;
   color: yellow;
   background: rgb(167, 11, 11);
+}
+
+
+/* Step List  */
+
+.step-list {
+  padding: 20px;
+}
+
+/* Step List Item  */
+
+.step-list-item {
+  display: flex;
+  flex-direction: row;
+  background: red;
+}
+
+
+/* Step Form  */
+
+.step-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
