@@ -42,6 +42,7 @@ export default class StepForm extends React.Component {
   render() {
     return(
       <div className='step-form'>
+        <h4 className='step-form-header'>Add a New Step</h4>
         <label className='form-label' >Title:
           <input type='text' 
             className='form-text-input'
