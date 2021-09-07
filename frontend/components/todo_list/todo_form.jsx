@@ -74,6 +74,7 @@ export default class TodoForm extends React.Component {
   render() {
     return(
       <div className='todo-form'>
+        <h2 className='todo-form-header'>New Todo</h2>
         <label className='form-label'>Title:
         <input type='text' 
           className='form-text-input'
