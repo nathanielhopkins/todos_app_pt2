@@ -12,6 +12,7 @@ export default class TodoForm extends React.Component {
       tags: []
     }
 
+    this.deleteTag = this.deleteTag.bind(this);
     this.receiveTodo = this.props.receiveTodo;
     this.updateTitle = this.updateTitle.bind(this);
     this.updateBody = this.updateBody.bind(this);
@@ -19,6 +20,15 @@ export default class TodoForm extends React.Component {
     this.updateNewTag = this.updateNewTag.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.uniqueId = this.uniqueId.bind(this);
+  }
+
+  deleteTag(e) {
+    e.preventDefault();
+
+    let idx = e.currentTarget.getAttribute('refkey');
+    let newTags = Array.from(this.state.tags);
+    newTags.splice(idx,1);
+    this.setState({tags: newTags});
   }
 
   updateTitle(event) {
@@ -104,7 +114,9 @@ export default class TodoForm extends React.Component {
             type='button'
             className='tag-button'
             value={tag}
-            key={idx}>
+            key={idx}
+            refkey={idx}
+            onClick={this.deleteTag}>
             </input>)}
         </div>
 
