@@ -109,6 +109,11 @@ body {
   border-radius: 5px;
 }
 
+.tag-button:hover {
+  cursor: pointer;
+  background: rgba(190, 164, 98, 0.918);
+}
+
 .form-button {
   display: block;
   font-family: Urbanist;
