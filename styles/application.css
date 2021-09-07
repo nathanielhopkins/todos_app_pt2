@@ -24,7 +24,7 @@ body {
   font-size: 18px;
 }
 
-/* TodoForm */
+/* Todo App */
 
 .todo-app {
   display: flex;
@@ -51,12 +51,21 @@ body {
   margin: 30px;
 }
 
+
+/* Todo Form  */
+
 .todo-form {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
   padding-bottom: 70vh;
   border-right: 1px solid darkgray;
+}
+
+.todo-form-header {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .form-label {
@@ -144,4 +153,14 @@ body {
 
 .todo-list-item {
   margin-bottom: 20px;
+}
+
+.todo-list-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-item-title {
+  padding: 20px;
+  padding-left: 0px;
 }
