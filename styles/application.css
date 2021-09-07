@@ -24,7 +24,7 @@ body {
   font-size: 18px;
 }
 
-/* App Styling */
+/* TodoForm */
 
 .todo-app {
   display: flex;
@@ -36,12 +36,19 @@ body {
   background: rgb(18, 92, 18);
   color: white;
   padding: 10px;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .todo-list-container {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 30px;
 }
 
 .todo-form {
@@ -59,6 +66,7 @@ body {
 
 .form-text-input {
   font-family: Urbanist;
+  background-color: white;
   height: 25px;
   width: 250px;
   border: 1px solid black;
@@ -71,6 +79,16 @@ body {
 .tags {
   margin-top: 20px;
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(236, 204, 122, 0.918);
+  border-radius: 5px;
+  width: 280px;
+  box-shadow:
+    3px 3px 0 #000,
+    -1px 0px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .form-button {
@@ -86,4 +104,10 @@ body {
   background:rgb(18, 92, 18);
   margin: 10px;
   align-self: center;
+}
+
+.form-button:hover {
+  background: rgb(15, 80, 15);
+  color: yellow;
+  cursor: pointer;
 }
