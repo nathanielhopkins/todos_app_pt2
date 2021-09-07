@@ -21,6 +21,7 @@ export default class TodoListItem extends React.Component {
   
   toggleView(e) {
     e.preventDefault();
+    if(e.target.type == 'button') return;
     this.setState({detail: !this.state.detail });
   }
 
