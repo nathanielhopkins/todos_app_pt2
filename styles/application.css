@@ -229,7 +229,16 @@ body {
 .step-list-item {
   display: flex;
   flex-direction: row;
-  background: red;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-left: 40px;
+  border-bottom: 1px solid black;
+}
+
+.step-list-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
