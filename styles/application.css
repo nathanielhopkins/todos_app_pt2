@@ -147,15 +147,29 @@ body {
 
 /* Todo List  */
 
-.todo-list {
-  margin-left: 20px;
-}
-
 .todo-list-item {
   margin-bottom: 20px;
+  margin-left: 10px;
+  display: block;
+  /* padding: 10px; */
+  background: rgba(236, 204, 122, 0.918);
+  border-radius: 5px;
+  box-shadow:
+    3px 3px 0 #000,
+    -1px 0px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.todo-list-header:hover {
+  cursor: pointer;
+  background: rgba(190, 164, 98, 0.918);
 }
 
 .todo-list-header {
+  padding: 10px;
+  padding-left: 20px;
   display: flex;
   flex-direction: row;
 }
@@ -163,4 +177,33 @@ body {
 .list-item-title {
   padding: 20px;
   padding-left: 0px;
+}
+
+/* Todo Detail View  */
+
+.todo-detail-view {
+  padding: 10px;
+}
+
+.detail-body {
+  margin-bottom: 15px;
+}
+
+.todo-delete {
+  display: block;
+  font-family: Urbanist;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background:rgb(202, 15, 15);
+  margin: 10px;
+  align-self: center;
+}
+
+.todo-delete:hover {
+  cursor: pointer;
+  color: yellow;
+  background: rgb(167, 11, 11);
 }
