@@ -12,6 +12,16 @@ export default class TodoDetailView extends React.Component {
     return(
       <div className='todo-detail-view'>
         <p className='detail-body'>{todo.body}</p>
+        <div className='tag-buttons'>
+          {todo.tags.map((tag, idx) => 
+            <input
+              type='button'
+              className='tag-button'
+              value={tag}
+              key={idx}
+            ></input>
+          )}
+        </div>
         <StepListContainer todoId={todo.id} />
         <button
           className='todo-delete'
