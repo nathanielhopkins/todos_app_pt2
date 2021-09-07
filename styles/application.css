@@ -185,6 +185,14 @@ body {
   padding: 10px;
 }
 
+.todo-detail-main {
+  /* background: rgba(245, 220, 139, 0.918); */
+  background: lightgoldenrodyellow;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 .detail-body {
   margin-bottom: 15px;
 }
