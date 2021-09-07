@@ -85,17 +85,27 @@ export default class TodoForm extends React.Component {
         <div className='tags'>
         <input type='text' 
           className='form-text-input'
-          placeholder='#tags'
+          placeholder='#tag'
           value={this.state.newTag}
           onChange={this.updateNewTag}
           ></input>
 
         <input type='button' 
           className='form-button'
-          value='Add Tags' 
+          value='Add Tag' 
           placeholder='Add a new tag'
           onClick={this.updateTags} 
           />
+        </div>
+
+        <div>
+          {this.state.tags.map((tag, idx) => 
+          <input 
+            type='button'
+            className='tag-buton'
+            value={tag}
+            key={idx}>
+            </input>)}
         </div>
 
         <input type='submit'
